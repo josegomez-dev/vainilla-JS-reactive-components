@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.getElementById('loading-screen');
     const navButtons = document.querySelectorAll('#footer-nav button');
@@ -83,4 +84,17 @@ function enableButtons() {
         button.classList.remove('disabled');
         button.removeAttribute('disabled');
     });
+}
+
+
+function animateAvatar() {
+    const character = document.getElementById('character');
+    // Add animation class to the character
+    character.classList.add('animate');
+    alert('asd')
+
+    // Remove the animation class after animation ends to allow retrigger
+    character.addEventListener('animationend', () => {
+        character.classList.remove('animate');
+    }, { once: true }); // The `once` option ensures the listener is removed after one call
 }

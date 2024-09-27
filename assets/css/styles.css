@@ -45,7 +45,7 @@ body, html {
   padding: 0 1.5em;
   background: var(--primary-color);
   box-shadow: inset 0 -.125rem red;
-  color: black;
+  color: white;
   font-weight: bolder;
   border-radius: 5em;
   cursor: pointer;
@@ -107,7 +107,7 @@ body, html {
 .black-type {
   background: black;
   box-shadow: inset 0 -.125rem black;
-  color: white;
+  color: red !important;
 }
 
 .white-type {
@@ -232,7 +232,6 @@ footer {
 .content-box {
   position: relative;
   width: auto;
-  padding: 20px;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   border-radius: 15px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -241,4 +240,77 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
   color: #fff; /* White text color */
   text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Container styling */
+.character-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 75px;
+
+  background: linear-gradient(45deg, var(--primary-color), white, var(--primary-color), var(--primary-color)); /* Initial gradient color */
+  animation: colorShift 1s ease infinite; /* Color animation */
+  box-shadow: 0 0 30px rgba(255, 111, 145, 0.6), 0 0 60px rgba(255, 150, 113, 0.4); /* Glowing shadow effect */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+  border: 1px solid black;
+}
+
+.character-container:hover {
+  transform: scale(1.1); /* Slightly enlarges the circle on hover */
+}
+
+/* Keyframes for the color animation */
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* Character image styling */
+.character {
+  width: 150px; /* Adjust the size as needed */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* For a smooth scaling effect */
+}
+
+/* Animation on click */
+@keyframes moveAnimation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Animation for scaling up on click */
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate {
+  animation: jump 0.6s ease-in-out, rotate 0.6s ease-in-out;
 }
