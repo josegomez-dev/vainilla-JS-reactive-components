@@ -86,11 +86,14 @@ function enableButtons() {
     });
 }
 
-
 function animateAvatar() {
     const character = document.getElementById('character');
     // Add animation class to the character
     character.classList.add('animate');
+
+    const clickSound = document.getElementById('click-sound');
+    clickSound.currentTime = 0; // Rewind to start (useful for rapid clicks)
+    clickSound.play();
 
     // Remove the animation class after animation ends to allow retrigger
     character.addEventListener('animationend', () => {
