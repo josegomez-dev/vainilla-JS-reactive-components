@@ -91,7 +91,6 @@ function animateAvatar() {
     const character = document.getElementById('character');
     // Add animation class to the character
     character.classList.add('animate');
-    alert('asd')
 
     // Remove the animation class after animation ends to allow retrigger
     character.addEventListener('animationend', () => {
