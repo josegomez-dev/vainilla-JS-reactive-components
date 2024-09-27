@@ -17,6 +17,7 @@ body, html {
 /* App Container */
 #main-container {
   margin: 15px;
+  margin-bottom: 80px;
 }
 
 .animate-site {
