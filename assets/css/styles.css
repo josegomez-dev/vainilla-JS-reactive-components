@@ -225,7 +225,7 @@ footer {
 }
 
 .menu-avatar {
-  position: absolute; width: 150px; top: 0; left: 60%; right: 0; margin: 0 auto;
+  max-width: 150px; top: 0; left: 60%; right: 0; margin: 0 auto;
 }
 
 /* Content Box Styling */
