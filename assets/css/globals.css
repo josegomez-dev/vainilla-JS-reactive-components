@@ -1,0 +1,19 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+
+  /* Neutral Colors */
+  --background-color: #000;
+  --background-light-color: #333;
+  --text-color: #fff;
+  --border-color: #bdc3c7;
+}
+
+.primary-text {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+}
